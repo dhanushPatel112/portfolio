@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Nav bar -->
+    <header class="text-gray-400 bg-gray-900 body-font custom-header" id="myHeader">
+        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg> -->
+                <span class="ml-3 text-xl">Dhanush Patel</span>
+            </a>
+            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+                <a href='./pages/home' class="mr-5 hover:text-white">Home</a>
+                <a href='./pages/about' class="mr-5 hover:text-white">About</a>
+                <a href='./pages/work' class="mr-5 hover:text-white">Work</a>
+                <a href="http://github.com/spockpatel" class="mr-5 hover:text-white" target="_blank">Github</a>
+                <a href="https://linkedin.com/in/dhanush-patel-2185291ab" class="mr-5 hover:text-white" target="_blank">Linkedin</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Landing page -->
+
+    <div class="wrapper">
+        <div class="flex-container bkg__gradient" id="div1">
+          <div class="flex-item" id="div2">
+            <header id="header1">
+              <div class="animate-slide-up" id="div3"><i class="fa fa-5x fa-codepen"></i></div>
+              <h1 class="animate-slide-up text-shadow" id="h11">Gradient Background Animation</h1>
+              <h2 class="animate-slide-up text-shadow " id="h21">jQuery ⸬ JavaScript</h2>
+              <p class="animate-slide-up text-shadow" id="p1">Background animation made possible by repeatedly (within a rapid interval) updating the element's background attribute (using jQuery) with two colors, each having its red, blue and green values incremented in each iteration (using plain JavaScript).</p>
+            </header>
+          </div>
+        </div>
+      </div>
+
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Hello I'am Dhanush Patel
+                </h1>
+                <h2>Computer Engineer</h2>
+                <br class="hidden lg:inline-block">
+                <!-- <div class="flex justify-center">
+              <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+              <button class="ml-4 inline-flex text-gray-400 bg-gray-800 border-0 py-2 px-6 focus:outline-none hover:bg-gray-700 hover:text-white rounded text-lg">Button</button>
+            </div> -->
+            </div>
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img class="object-cover object-center rounded" alt="hero"
+                    src="./images/B612_20200303_135753_967-01.jpeg">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- About -->
+
+    <section class="text-gray-400 body-font bg-gray-900">
+        <div class="container px-5 py-15 mx-auto">
+            <div style="background-color: #111827;" class="mb-20 h-1 w-20 bg-indigo-500 rounded"></div>
+            <h1 style='text-align: center' class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">About
+            </h1>
+            <div class="h-1 w-20 bg-indigo-500 rounded center"></div>
+        </div>
+    </section>
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <!-- <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
+                <img class="object-cover object-center rounded" alt="hero" src="./images/DSC_0164.jpg">
+            </div> -->
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">I am Computer Engineer
+                </h1>
+                <p class="mb-8 leading-text">Determined Web Developer lends more than 2 years
+                    of expertise in developing web-planning projects in
+                    fast-paced environments requiring <br> fast turnaround.
+                    Thorough grasp of React JS and Node JS contributes
+                    to generating custom script for specific
+                    organizational needs.</p>
+
+
+                <p>Node</p>
+                <div class="container">
+                    <div class="skills node">90%</div>
+                </div>
+
+                <p>React</p>
+                <div class="container">
+                    <div class="skills react">80%</div>
+                </div>
+
+                <p>Python</p>
+                <div class="container">
+                    <div class="skills python">70%</div>
+                </div>
+
+                <p>Google Cloud Platform</p>
+                <div class="container">
+                    <div class="skills gcp">50%</div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container center">
+            <!-- <div class='container'> -->
+            <h2 style="text-align:center;">Other skill set</h2>
+            <hr style="width:100%;text-align:left;margin-left:0;background-color:white">
+            <br>
+            <button type="button" class="btn btn-1 btn-1a">MERN stack</button>
+            <button type="button" class="btn btn-1 btn-1a">Redux</button>
+            <button type="button" class="btn btn-1 btn-1a">GraphQL</button>
+            <button type="button" class="btn btn-1 btn-1a">HTML</button>
+            <button type="button" class="btn btn-1 btn-1a">CSS</button>
+            <button type="button" class="btn btn-1 btn-1a">JavaScript</button>
+            <button type="button" class="btn btn-1 btn-1a">Basic Java</button>
+            <button type="button" class="btn btn-1 btn-1a">MongoDB</button>
+            <button type="button" class="btn btn-1 btn-1a">MySQL</button>
+            <button type="button" class="btn btn-1 btn-1a">Postman</button>
+            <button type="button" class="btn btn-1 btn-1a">C Programming</button>
+            <button type="button" class="btn btn-1 btn-1a">Machine learning</button>
+            <button type="button" class="btn btn-1 btn-1a">Git</button>
+            <button type="button" class="btn btn-1 btn-1a">IOT</button>
+            <button type="button" class="btn btn-1 btn-1a">Chrome extension development</button>
+            <button type="button" class="btn btn-1 btn-1a">NumPy</button>
+            <button type="button" class="btn btn-1 btn-1a">Pandas</button>
+            <button type="button" class="btn btn-1 btn-1a">Matplotlib</button>
+            <button type="button" class="btn btn-1 btn-1a">Sea born</button>
+            <button type="button" class="btn btn-1 btn-1a">SciKit learn</button>
+        </div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <!-- Work -->
+    <!-- <section class="text-gray-400 body-font bg-gray-900">
+        <div class="container px-5 py-15 mx-auto">
+            <div style="background-color: #111827;" class="mb-20 h-1 w-20 bg-indigo-500 rounded"></div>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Work</h1>
+            <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+        </div>
+    </section> -->
+    <section class="text-gray-400 body-font bg-gray-900">
+        <div class="container px-5 py-15 mx-auto">
+            <div style="background-color: #111827;" class="mb-20 h-1 w-20 bg-indigo-500 rounded"></div>
+            <h1 style='text-align: center' class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Personal Project</h1>
+            <div class="h-1 w-20 bg-indigo-500 rounded center"></div>
+        </div>
+    </section>
+
+
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
+                <img class="object-cover object-center rounded" alt="hero" src="./images/book_store1.png">
+            </div>
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Book store
+                </h1>
+                <p class="mb-50 leading-relaxed">A MERN stack web app platform used for purchasing and selling books.
+                    Web app consist of Admin panel to manage and regulate the stock and
+                    Payment gateway with secure and encrypted PayPal and Credit card
+                    Support. It has also search functionality with various filters.</p>
+                <h2>Link : <a style="color:blue" href="https://mernstackbookstore.herokuapp.com" target="_blank"
+                        rel="noopener noreferrer">https://mernstackbookstore.herokuapp.com</a></h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Expense Manger</h1>
+                <p class="mb-50 leading-relaxed">It is a web app built using ReactJS and Node JS to provide easy and
+                    userfriendly
+                    experience to manage and store expense and income. It provides
+                    category feature to maintain records for future analysis.</p>
+                <div class="flex w-full md:justify-start justify-center items-end">
+                </div>
+                <div class="flex lg:flex-row md:flex-col text-gray-300">
+                </div>
+                <h2>Link : <a style="color:blue" href="https://github.com/spockpatel/Expense-manager" target="_blank"
+                        rel="noopener noreferrer">https://github.com/spockpatel/Expense-manager</a></h2>
+            </div>
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img class="object-cover object-center rounded" alt="hero" src="./images/expenseManger.png">
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
+                <img class="object-cover object-center rounded" alt="hero" src="./images/colurGame.png">
+            </div>
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Color Game
+                </h1>
+                <p class="mb-50 leading-relaxed">A nice responsive game in which one has to guess the hash code of
+                    color. It has different difficulty levels and built using HTML, CSS and JS.</p>
+                <h2>Link : <a style="color:blue" href="https://simplecolorgamebydhanush.herokuapp.com" target="_blank"
+                        rel="noopener noreferrer">https://simplecolorgamebydhanush.herokuapp.com</a></h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Pata Tap</h1>
+                <p class="mb-50 leading-relaxed">A fun single page website built using HTML, CSS and JavaScript with help
+                    of Canvas. It has various musical notes on pressing keyboard keys with
+                    various different animations.</p>
+                <h2>Link : <a style="color:blue" href="https://patatapbydhanush.herokuapp.com" target="_blank"
+                        rel="noopener noreferrer">https://patatapbydhanush.herokuapp.com</a></h2>
+
+                <div class="flex w-full md:justify-start justify-center items-end">
+                </div>
+                <div class="flex lg:flex-row md:flex-col text-gray-300">
+                </div>
+            </div>
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img class="object-cover object-center rounded" alt="hero" src="./images/pataTap.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
+                <img class="object-cover object-center rounded" alt="hero" src="./images/NFO.png">
+            </div>
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">NSE option chain Data extractor
+                </h1>
+                <p class="mb-50 leading-relaxed">Built python script using Numpy and Pandas library to create statistical
+                    data containing margin price data for all companies with listed strike
+                    price for call & put options using zerodha API.</p>
+                <h2>Link : <a style="color:blue" href="https://github.com/spockpatel/NSE-F-O" target="_blank"
+                        rel="noopener noreferrer">https://github.com/spockpatel/NSE-F-O</a></h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+            <div
+                class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Pata Tap</h1>
+                <p class="mb-50 leading-relaxed">A fun single page website built using HTML, CSS and JavaScript with help
+                    of Canvas. It has various musical notes on pressing keyboard keys with
+                    various different animations.</p>
+                <h2>Link : <a style="color:blue" href="https://patatapbydhanush.herokuapp.com" target="_blank"
+                        rel="noopener noreferrer">https://patatapbydhanush.herokuapp.com</a></h2>
+
+                <div class="flex w-full md:justify-start justify-center items-end">
+                </div>
+                <div class="flex lg:flex-row md:flex-col text-gray-300">
+                </div>
+            </div>
+            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                <img class="object-cover object-center rounded" alt="hero" src="./images/pataTap.png">
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Educational Background -->
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <section class="text-gray-400 body-font bg-gray-900">
+                <div class="container px-5 py-15 mx-auto">
+                    <!-- <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Work</h1> -->
+                    <section class="text-gray-400 body-font bg-gray-900">
+                        <div class="container px-5 py-15 mx-auto">
+                            <div style="background-color: #111827;" class="mb-20 h-1 w-20 bg-indigo-500 rounded"></div>
+                            <h1 style='text-align: center'
+                                class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">Educational
+                                Background</h1>
+                            <div class="h-1 w-20 bg-indigo-500 rounded center"></div>
+                        </div>
+                    </section>
+                    <div class="mb-20 h-1 w-20"></div>
+                </div>
+            </section>
+            <div class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
+                <div class="p-4 md:w-1/3 flex">
+                    <div class="flex-grow pl-6">
+                        <h2 class="text-white text-lg title-font font-medium mb-2">BE Computer Engineer</h2>
+                        <h4 class="text-white title-font mb-2">LJ Institute of Engineering And Technology</h4>
+                        <p class="leading-relaxed text-lg">CGPA: 9.17</p>
+                        <p class="leading-relaxed text-base">07/2018 - Present</p>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex">
+                    <div class="flex-grow pl-6">
+                        <h2 class="text-white text-lg title-font font-medium mb-2">Higher Secondary School</h2>
+                        <h4 class="text-white title-font mb-2">M.B. Patel Secondary and High secondary school</h4>
+                        <p class="leading-relaxed text-lg">Percentile - 86.6</p>
+                        <p class="leading-relaxed text-base">06/2016 - 08/2018</p>
+                    </div>
+                </div>
+                <div class="p-4 md:w-1/3 flex">
+                    <div class="flex-grow pl-6">
+                        <h2 class="text-white text-lg title-font font-medium mb-2">Secondary School</h2>
+                        <h4 class="text-white title-font mb-2">M.B. Patel Secondary and High secondary school</h4>
+                        <p class="leading-relaxed text-lg">Percentile - 97.59</p>
+                        <p class="leading-relaxed text-base">06/2014 - 03/2016</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Certification
+    <section class="text-gray-400 body-font bg-gray-900">
+        <div class="container px-5 py-15 mx-auto">
+            <div style="background-color: #111827;" class="mb-20 h-1 w-20 bg-indigo-500 rounded"></div>
+            <h1 style='text-align: center' class="sm:text-3xl text-2xl font-medium title-font mb-2 text-white">
+                Certificates And Achievements</h1>
+            <div class="h-1 w-20 bg-indigo-500 rounded center"></div>
+        </div>
+
+
+
+    </section> -->  
+
+
+
+
+
+    <!-- java script here  -->
+    <script src="index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
