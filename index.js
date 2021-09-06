@@ -62,8 +62,4 @@ $(function animateBkgInit() {
 	// animateBkgStop = setTimeout(function() {
 	// 	clearInterval(animateBkgLoop);
 	// }, 180000)
-	
-	// DEMO ONLY - NOT USED TO ANIMATE THE BACKGROUND
-	$(".animate-slide-up").velocity("transition.slideUpBigIn", { delay: 500, stagger: 100, drag: true} );
-	
-});
+	});
