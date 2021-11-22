@@ -4,9 +4,6 @@
 .landing-style-display-container:hover {
   display: block;
 }
-.landing-style-display-container:hover span {
-  display: inline-block;
-}
 .landing-style-content {
   margin-left: auto;
   margin-right: auto;
