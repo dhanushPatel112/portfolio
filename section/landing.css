@@ -31,7 +31,7 @@ img {
 }
 
 .landing-style-margin-top {
-  margin-top: -100px !important;
+  margin-top: -110px !important;
 }
 
 .landing-style-center {
@@ -57,4 +57,26 @@ img {
 }
 .landing-style-opacity-min {
   opacity: 0.75;
+}
+
+.landing-style-text-light-grey,
+.landing-style-hover-text-light-grey:hover,
+.landing-style-text-light-gray,
+.landing-style-hover-text-light-gray:hover {
+  color: #f1f1f1 !important;
+}
+
+@media only screen and (max-width: 675px) {
+  .landing-style-margin-top {
+    margin-top: 16px !important;
+  }
+  .landing-style-padding {
+    padding: 4px 2px !important;
+  }
+  .landing-style-xxlarge {
+    font-size: 17px !important;
+  }
+  .landing-style-hide-small {
+    display: none !important;
+  }
 }
