@@ -3,106 +3,98 @@
 
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Personal Portfolio</title>
+		<!-- script for injecting html components to main file -->
+		<script>
+			function includeHTML() {
+				var z, i, elmnt, file, xhttp
+				/*loop through a collection of all HTML elements:*/
+				z = document.getElementsByTagName("*")
+				for (i = 0; i < z.length; i++) {
+					elmnt = z[i]
+					/*search for elements with a certain atrribute:*/
+					file = elmnt.getAttribute("w3-include-html")
+					if (file) {
+						/*make an HTTP request using the attribute value as the file name:*/
+						xhttp = new XMLHttpRequest()
+						xhttp.onreadystatechange = function () {
+							if (this.readyState == 4) {
+								if (this.status == 200) {
+									elmnt.innerHTML = this.responseText
+								}
+								if (this.status == 404) {
+									elmnt.innerHTML = "Page not found."
+								}
+								/*remove the attribute, and call this function once more:*/
+								elmnt.removeAttribute("w3-include-html")
+								includeHTML()
+							}
+						}
+						xhttp.open("GET", file, true)
+						xhttp.send()
+						/*exit the function:*/
+						return
+					}
+				}
+			}
+		</script>
+		<link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+		<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal Portfolio</title>
-    <!-- script for injecting html components to main file -->
-    <script>
-        function includeHTML() {
-            var z, i, elmnt, file, xhttp;
-            /*loop through a collection of all HTML elements:*/
-            z = document.getElementsByTagName("*");
-            for (i = 0; i < z.length; i++) {
-                elmnt = z[i];
-                /*search for elements with a certain atrribute:*/
-                file = elmnt.getAttribute("w3-include-html");
-                if (file) {
-                    /*make an HTTP request using the attribute value as the file name:*/
-                    xhttp = new XMLHttpRequest();
-                    xhttp.onreadystatechange = function () {
-                        if (this.readyState == 4) {
-                            if (this.status == 200) { elmnt.innerHTML = this.responseText; }
-                            if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
-                            /*remove the attribute, and call this function once more:*/
-                            elmnt.removeAttribute("w3-include-html");
-                            includeHTML();
-                        }
-                    }
-                    xhttp.open("GET", file, true);
-                    xhttp.send();
-                    /*exit the function:*/
-                    return;
-                }
-            }
-        };
-    </script>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
-</head>
+	<body>
+		<!-- Nav bar -->
+		<header class="text-gray-400 bg-gray-900 body-font custom-header" id="myHeader">
+			<div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+				<a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+					<a href="#home" class="ml-3 text-xl">Dhanush Patel</a>
+				</a>
+				<nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+					<a href="#about" class="mr-5 hover:text-white">About</a>
+					<a href="#internship_experience" class="mr-5 hover:text-white">Work</a>
+					<a href="./resume/Dhanush_Patel_LJ.pdf" class="mr-5 hover:text-white">Resume</a>
+					<a href="http://github.com/spockpatel" class="mr-5 hover:text-white" target="_blank"><em class="fab fa-github fa-2x"></em></a>
+					<a href="https://linkedin.com/in/dhanush-patel-2185291ab" class="mr-5 hover:text-white" target="_blank"><em class="fab fa-linkedin fa-2x"></em></a>
+				</nav>
+			</div>
+		</header>
 
-<body>
+		<!-- Landing page -->
+		<div w3-include-html="section/landing.html"></div>
 
-    <!-- Nav bar -->
-    <header class="text-gray-400 bg-gray-900 body-font custom-header" id="myHeader">
-        <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-            <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg> -->
-                <a href='#home' class="ml-3 text-xl">Dhanush Patel</a>
-            </a>
-            <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+		<!-- About -->
+		<div w3-include-html="section/about.html"></div>
 
-                <a href='#about' class="mr-5 hover:text-white">About</a>
-                <a href='#internship_experience' class="mr-5 hover:text-white">Work</a>
-                <a href='./resume/Dhanush_Patel_LJ.pdf' class="mr-5 hover:text-white">Resume</a>
-                <a href="http://github.com/spockpatel" class="mr-5 hover:text-white" target="_blank"><i
-                        class="fab fa-github fa-2x"></i></a>
-                <a href="https://linkedin.com/in/dhanush-patel-2185291ab" class="mr-5 hover:text-white"
-                    target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-            </nav>
-        </div>
-    </header>
+		<!-- Work experience  -->
+		<div w3-include-html="section/work_experience.html"></div>
 
-    <!-- Landing page -->
-    <div w3-include-html="section/landing.html"></div>
+		<!-- Internship experience  -->
+		<div w3-include-html="section/internship_experience.html"></div>
 
-    <!-- About -->
-    <div w3-include-html="section/about.html"></div>
+		<!-- Work -->
+		<div w3-include-html="section/work.html"></div>
 
-    <!-- Internship experience  -->
-    <div w3-include-html="section/internship_experience.html"></div>
+		<!-- Educational Background -->
+		<div w3-include-html="section/education.html"></div>
 
-    <!-- Work -->
-    <div w3-include-html="section/work.html"></div>
+		<!-- Certification -->
+		<div w3-include-html="section/certificate.html"></div>
 
-    <!-- Educational Background -->
-    <div w3-include-html="section/education.html"></div>
-
-    <!-- Certification -->
-    <div w3-include-html="section/certificate.html"></div>
-
-
-    <!-- java script here  -->
-    <script>includeHTML();</script>
-    <script src="index.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-
-</body>
-
+		<!-- java script here  -->
+		<script>
+			includeHTML()
+		</script>
+		<script src="index.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
 </html>
