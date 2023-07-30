@@ -25,7 +25,7 @@ const Work = () => {
               <div className="flex flex-wrap -mx-4 -my-8">
                 <div data-te-toggle="tooltip" title="NextJS" className="py-0 px-4 lg:w-1/4 md:w-1/2">
                   <div className="h-full flex items-center justify-center">
-                    <Image src="/images/nextjs.svg" alt="NextJS" width={130} height={130} />
+                    <Image src="images/nextjs.svg" alt="NextJS" width={130} height={130} />
                   </div>
                 </div>
                 <div data-te-toggle="tooltip" title="ReactJS" className="py-0 px-4 lg:w-1/4 md:w-1/2">
@@ -40,7 +40,7 @@ const Work = () => {
                 </div>
                 <div data-te-toggle="tooltip" title="NestJS" className="py-0 px-4 lg:w-1/4 md:w-1/2">
                   <div className="h-full flex items-center justify-center">
-                    <Image src="/images/nestjs.svg" alt="NestJS" width={80} height={80} />
+                    <Image src="images/nestjs.svg" alt="NestJS" width={80} height={80} />
                   </div>
                 </div>
               </div>

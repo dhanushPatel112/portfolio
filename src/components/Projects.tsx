@@ -12,7 +12,7 @@ const Projects = () => {
       <section className="text-black bg-white body-font">
         <div className="container mx-auto flex flex-wrap px-5 py-16 lg:flex-row md:flex-col items-center">
           <div className="lg:w-1/2 md:w-full mb-10 lg:mb-0 lg:order-first md:order-last">
-            <Image src="/images/book_store.png" alt="Book Store" width={600} height={400} className="object-cover object-center rounded w-full" />
+            <Image src="images/book_store.png" alt="Book Store" width={600} height={400} className="object-cover object-center rounded w-full" />
           </div>
           <div className="lg:w-1/2 lg:pl-10 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center lg:order-last md:order-first">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">Book store</h1>
@@ -46,7 +46,7 @@ const Projects = () => {
             </h2>
           </div>
           <div className="lg:w-1/2 w-full">
-            <Image src="/images/pataTap.png" alt="Pata Tap" width={600} height={400} className="object-cover object-center rounded w-full" />
+            <Image src="images/pataTap.png" alt="Pata Tap" width={600} height={400} className="object-cover object-center rounded w-full" />
           </div>
         </div>
       </section>
@@ -55,7 +55,7 @@ const Projects = () => {
       <section className="text-black bg-white body-font">
         <div className="container mx-auto flex flex-wrap px-5 py-16 lg:flex-row md:flex-col items-center">
           <div className="lg:w-1/2 md:w-full mb-10 lg:mb-0 lg:order-first md:order-last">
-            <Image src="/images/colurGame.png" alt="Color Game" width={600} height={400} className="object-cover object-center rounded w-full" />
+            <Image src="images/colurGame.png" alt="Color Game" width={600} height={400} className="object-cover object-center rounded w-full" />
           </div>
           <div className="lg:w-1/2 lg:pl-10 md:pl-8 flex flex-col md:items-start md:text-left items-center text-center lg:order-last md:order-first">
             <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">Color Game</h1>
