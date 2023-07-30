@@ -4,7 +4,7 @@
   /* background: #555; */
   color: #f1f1f1;
   position: absolute;
-  width: 100%;
+  width: 100vw;
 }
 
 /* Page content */
@@ -24,7 +24,7 @@
   padding-top: 102px;
 }
 
-.container{
+.container {
   width: 100% !important;
 }
 
@@ -33,13 +33,6 @@
   width: 90%;
   border: 3px solid rgba(42, 43, 59, 0.589);
   padding: 10px;
-}
-
-.bg-indigo-500.center {
-  margin: auto;
-  width: 20%;
-  border: 3px solid rgba(42, 43, 59, 0.589);
-  padding: 1.5px;
 }
 
 /* skills */
@@ -58,19 +51,19 @@
   background-color: #04aa6d;
 }
 .react {
-  width: 80%;
+  width: 85%;
   background-color: #2196f3;
 }
-.angular {
-  width: 70%;
+.nestjs {
+  width: 80%;
   background-color: #36f321;
 }
-.python {
-  width: 65%;
+.nextjs {
+  width: 85%;
   background-color: #f44336;
 }
-.gcp {
-  width: 50%;
+.python {
+  width: 70%;
   background-color: #808080;
 }
 .btn {
@@ -142,22 +135,18 @@
 
 /* Button 1 */
 .btn-1 {
-  border: 3px solid #fff;
-  color: #fff;
+  border: 3px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 /* Button 1a */
-.btn-1a:hover,
+/* .btn-1a:hover,
 .btn-1a:active {
-  color: #0e83cd;
+  color: #000000;
   background: #fff;
-}
-
-
-
+} */
 
 /* animation page css */
-
 
 .text-shadow {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -202,6 +191,6 @@ html {
 }
 
 /* ..... */
-.inbetween{
-  margin: 4% auto !important; 
+.inbetween {
+  margin: 4% auto !important;
 }
