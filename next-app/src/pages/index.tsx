@@ -5,9 +5,6 @@ import Landing from "@/components/Landing";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Work from "@/components/Work";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (

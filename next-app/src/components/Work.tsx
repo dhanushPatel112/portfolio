@@ -1,27 +1,24 @@
-/* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 import Title from "./Title";
+import Link from "next/link";
+import Image from "next/image";
 
 const Work = () => {
   return (
     <div>
       <Title id={"experience"} title={"Work"} />
       <section className="text-black bg-white body-font">
-        <div className="container px-5 py-10 mx-auto">
+        <div className="container px-5 py-0 mx-auto">
           <section className="text-black body-font bg-white">
-            <div className="p-6 rounded-lg border-4 border-gray-700">
+            <div className="h-full p-6 rounded-lg border-4 border-gray-700 flex flex-col">
               <h2 className="text-right text-md tracking-widest text-black title-font mb-1 font-medium">02/2022 - Present</h2>
-              <Link href="https://www.rysun.com/" className="text-3xl text-black pb-4 mb-4 border-b border-gray-800 leading-none" target="_blank">
+              <Link href="https://www.rysun.com/" className="text-3xl text-black pb-2  border-b border-gray-800 leading-none" target="_blank">
                 Rysun
               </Link>
-              <h1 className="flex items-center text-1xl mt-auto text-black border-0 py-5 px-4 w-full focus:outline-none rounded">
+              <h1 className="flex items-center text-1xl mt-auto text-black border-0 py-3 px-4 w-full focus:outline-none rounded">
                 <b>ROLE:</b> &nbsp; JavaScript Developer
               </h1>
-              {/* <h1 className="flex items-center text-xl mt-auto text-black border-0 py-5 px-4 w-full focus:outline-none rounded">
-              <b className="mr-3">ROLE:</b> Full stack Web app developer
-            </h1> */}
+
               <p className="flex items-center text-black mb-1">
                 <span className="w-4 h-4 mr-4 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0"></span>Technology worked on
               </p>
