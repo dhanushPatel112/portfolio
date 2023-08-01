@@ -44,7 +44,7 @@ const About = () => {
             <div className="flex flex-col justify-center items-center">
               <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">I am a Full Stack Developer</h1>
               <p className="px-8 py-2 text-center leading-relaxed">
-                A motivated JavaScript web developer with 6 months of industry experience and the ability to learn and collaborate in rapidly changing environments. Eager to tackle web development
+                A motivated JavaScript web developer with 1.5 years of industry experience and the ability to learn and collaborate in rapidly changing environments and eager to tackle web development
                 challenges to achieve lasting impacts.
               </p>
             </div>
