@@ -1,5 +1,5 @@
-import Link from "next/link";
-import React from "react";
+import Link from "next/link"
+import React from "react"
 
 const Navbar = () => {
   return (
@@ -17,6 +17,9 @@ const Navbar = () => {
           <Link href="#experience" className="mr-5">
             Experience
           </Link>
+          <Link href="#certification" className="mr-5">
+            Certificate
+          </Link>
           <Link href="#education" className="mr-5">
             Education
           </Link>
@@ -32,7 +35,7 @@ const Navbar = () => {
         </nav>
       </div>
     </header>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

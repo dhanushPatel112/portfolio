@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Title = ({ id, title }: { id: string; title: string }) => {
   return (
@@ -13,7 +13,7 @@ const Title = ({ id, title }: { id: string; title: string }) => {
         </section>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Title;
+export default Title
