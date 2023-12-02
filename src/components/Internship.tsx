@@ -1,6 +1,6 @@
-import React from "react";
-import Title from "./Title";
-import Link from "next/link";
+import React from "react"
+import Title from "./Title"
+import Link from "next/link"
 
 const Internship = () => {
   return (
@@ -10,28 +10,43 @@ const Internship = () => {
         <div className="container px-5 py-0 mx-auto">
           <section className="text-black body-font bg-white">
             <div className="h-full p-6 rounded-lg border-4 border-gray-700 flex flex-col">
-              <h2 className="text-right text-md tracking-widest text-black title-font mb-1 font-medium">06/2021 - 11/2021</h2>
-              <Link href="https://asambhav.in/" className="text-3xl text-black pb-4 mb-4 border-b border-gray-800 leading-none" target="_blank">
+              <h2 className="text-right text-md tracking-widest text-black title-font mb-1 font-medium">
+                06/2021 - 11/2021
+              </h2>
+              <Link
+                href="https://asambhav.in/"
+                className="text-3xl text-black pb-4 mb-4 border-b border-gray-800 leading-none"
+                target="_blank"
+              >
                 Asambhav Solution
               </Link>
               <h1 className="flex items-center text-1xl mt-auto text-black border-0 py-5 px-4 w-full focus:outline-none rounded">
                 <b>ROLE:</b> &nbsp; JavaScript Developer
               </h1>
               <p className="flex items-center text-black py-5">
-                <span className="w-4 h-4 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0"></span>Projects
+                <span className="w-2 h-2 mr-2 inline-flex items-center justify-center bg-gray-800 text-gray-500 rounded-full flex-shrink-0"></span>
+                Projects
               </p>
               <div className="container px-5 mx-auto flex flex-wrap">
-                <h2 className="sm:text-3xl text-2xl text-black font-medium title-font mb-2 md:w-2/5">Chrome extension:</h2>
+                <h2 className="sm:text-3xl text-2xl text-black font-medium title-font mb-2 md:w-2/5">
+                  Chrome extension:
+                </h2>
                 <div className="md:w-3/5 md:pl-6">
                   <p className="leading-relaxed text-base">
-                    Chrome extension which can be utilized to scrape information from different sites with ReactJS technology &nbsp;
-                    <a href="https://chrome.google.com/webstore/detail/super-scrapper-with-dom/nbhengfkabkgfldgobllnaihnejcbdei" className="mr-5 hover:text-black" target="_blank">
+                    Chrome extension which can be utilized to scrape information from different sites with ReactJS
+                    technology &nbsp;
+                    <a
+                      href="https://chrome.google.com/webstore/detail/super-scrapper-with-dom/nbhengfkabkgfldgobllnaihnejcbdei"
+                      className="mr-5 hover:text-black"
+                      target="_blank"
+                    >
                       Link: <em className="fas fa-link"></em>
                     </a>
                   </p>
                   <div className="flex md:mt-4 mt-6">
                     <a className="text-indigo-400 inline-flex items-center ml-4">
-                      Technology used &emsp; <em className="fab fa-js-square fa-2x" data-te-toggle="tooltip" title="JavaScript"></em>
+                      Technology used &emsp;{" "}
+                      <em className="fab fa-js-square fa-2x" data-te-toggle="tooltip" title="JavaScript"></em>
                       &nbsp;&nbsp;&nbsp;&nbsp;
                       <em className="fab fa-react fa-2x" data-te-toggle="tooltip" title="ReactJS"></em>
                     </a>
@@ -42,8 +57,8 @@ const Internship = () => {
                 <h2 className="sm:text-3xl text-2xl text-black font-medium title-font mb-2 md:w-2/5">Hiring portal:</h2>
                 <div className="md:w-3/5 md:pl-6">
                   <p className="leading-relaxed text-base">
-                    Job portal is an application which connects employers and job seekers where employers are the source of the resources and job seekers can find and apply for their targeted job.
-                    &nbsp;
+                    Job portal is an application which connects employers and job seekers where employers are the source
+                    of the resources and job seekers can find and apply for their targeted job. &nbsp;
                   </p>
                   <div className="flex md:mt-4 mt-6">
                     <a className="text-indigo-400 inline-flex items-center ml-4">
@@ -51,7 +66,13 @@ const Internship = () => {
                       <em className="fab fa-node fa-2x" data-te-toggle="tooltip" title="NodeJS"></em>
                       &emsp;
                       <em data-te-toggle="tooltip" title="Prisma">
-                        <svg width="28" height="32" viewBox="0 0 106 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg
+                          width="28"
+                          height="32"
+                          viewBox="0 0 106 128"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
                           <path
                             fillRule="evenodd"
                             clipRule="evenodd"
@@ -69,7 +90,7 @@ const Internship = () => {
         </div>
       </section>
     </div>
-  );
-};
+  )
+}
 
-export default Internship;
+export default Internship
