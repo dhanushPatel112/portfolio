@@ -3,7 +3,7 @@ import React from "react"
 import Image from "next/image"
 // Use public path string for Next/Image to avoid type import issues
 import Link from "next/link"
-import coverImage from "/public/images/profile 2.jpg"
+import coverImage from "/public/images/profile_pic_2.jpeg"
 
 const Landing = () => {
   return (
