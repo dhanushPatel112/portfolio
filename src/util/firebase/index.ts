@@ -1,5 +1,5 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "firebase/app"
+import { getAnalytics } from "firebase/analytics"
 // import firebase from "firebase/app";
 // import "firebase/analytics";
 const firebaseConfig = {
@@ -10,7 +10,7 @@ const firebaseConfig = {
   messagingSenderId: "311883681974",
   appId: "1:311883681974:web:cc35ae087130270b879617",
   measurementId: "G-RPK8F3R5GR",
-};
+}
 
 export const initFirebase = () => {
   //   const app = initializeApp(firebaseConfig);
@@ -18,7 +18,9 @@ export const initFirebase = () => {
   //     firebase.initializeApp(firebaseConfig);
   //     firebase.analytics(); // Initialize Firebase Analytics
   //   }
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-  return analytics;
-};
+  if (process.env.NEXT_PUBLIC_API_KEY) {
+    const app = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(app)
+    return analytics
+  }
+}

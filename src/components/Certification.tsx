@@ -57,13 +57,20 @@ const Certification = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {certifications.map((certification, index) => (
               <div key={index} className="bg-white p-4 shadow-md rounded-md">
-                <Image src={certification.image} alt={certification.title} className="w-40 h-40 object-cover mb-4" />
+                <Image
+                  src={certification.image}
+                  alt={certification.title}
+                  width={140}
+                  height={140}
+                  className="object-cover mb-4 rounded"
+                />
                 <h2 className="text-lg font-semibold mb-2">{certification.title}</h2>
                 <Link
                   href={certification.link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-blue-500 hover:underline"
+                  aria-label={`View ${certification.title}`}
                 >
                   View {certification?.type || "Certification"}
                 </Link>
