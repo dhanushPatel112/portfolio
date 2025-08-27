@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -52,10 +52,22 @@ jobs:
             exit 1
           fi
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: "16"
+          node-version: "18"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          # cache pnpm store, npm cache and node_modules to speed up installs
+          path: |
+            ~/.pnpm-store
+            ~/.npm
+            node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/pnpm-lock.yaml', '**/package-lock.json', '**/yarn.lock') }}-${{ hashFiles('**/package.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
