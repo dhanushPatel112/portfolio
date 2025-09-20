@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+
+  <!-- Fallback meta refresh (in case JS is disabled) -->
+  <meta http-equiv="refresh" content="3; url=https://dhanushpatel112.vercel.app" />
+</head>
+<body>
+  <p>Redirecting to <a href="https://dhanushpatel112.vercel.app"> new portfolio</a>...</p>
+
+  <script>
+    // Preserve path and query params when redirecting
+    const newBase = "https://dhanushpatel112.vercel.app";
+    const redirectUrl = newBase + window.location.pathname + window.location.search + window.location.hash;
+    window.location.replace(redirectUrl);
+  </script>
+</body>
+</html>
