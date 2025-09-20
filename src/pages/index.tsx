@@ -14,15 +14,15 @@ export default function Home() {
     <>
       <Navbar />
       <Landing />
-  <About />
-  <Skills />
-  <Work />
-  <Projects />
-  <Certification />
-  <Internship />
-  <Education />
-  {/* TODO: add contact backend function */}
-  {/* <Contact /> */}
+      <About />
+      <Skills />
+      <Work />
+      <Projects />
+      <Certification />
+      <Internship />
+      <Education />
+      {/* TODO: add contact backend function */}
+      <Contact />
     </>
   )
 }
