@@ -22,7 +22,7 @@ export default function Home() {
       <Internship />
       <Education />
       {/* TODO: add contact backend function */}
-      {/* <Contact /> */}
+      <Contact />
     </>
   )
 }

@@ -2,7 +2,7 @@
 const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  output: "export",
+  // output: "export",
   reactStrictMode: true,
   images: {
     unoptimized: true, // GitHub Pages doesn't support Next.js image optimization
