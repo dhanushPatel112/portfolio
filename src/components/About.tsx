@@ -21,7 +21,7 @@ const About = () => {
 
             <div className="p-4 rounded-lg border border-slate-100 shadow-sm">
               <h3 className="text-lg font-semibold text-slate-900">What I value</h3>
-              <p className="mt-2 text-slate-600">Performance, accessibility, clean code, and continuous learning.</p>
+              <p className="mt-2 text-slate-600">Performance, clean code, and continuous learning.</p>
             </div>
           </div>
         </div>
