@@ -1,12 +1,3 @@
-import React from "react"
-import Title from "./Title"
-import Link from "next/link"
-import Image from "next/image"
-import nextJsImage from "public/images/nextjs.svg"
-import nestJsImage from "public/images/nestjs.svg"
-import postgreSQLLogo from "public/images/postgreSQLLogo.svg"
-import nextJsLogo from "public/images/nextJsLogo.svg"
-import mongoDBLogo from "public/images/mongoDBLogo.svg"
 
 const Work = () => {
   return (
@@ -26,10 +17,14 @@ const Work = () => {
             </div>
 
             <ul className="mt-4 list-inside list-disc text-slate-700 space-y-2">
-              <li>Led full-stack development of enterprise apps using Node.js, React and TypeScript.</li>
-              <li>Migrated legacy Java backend to Node.js while ensuring stability for financial transaction flows.</li>
-              <li>Built scalable backend services with Express, Prisma and MySQL; implemented auth and role-based access.</li>
-              <li>Implemented Telegram mini-apps and WebSocket-based real-time features.</li>
+              <li>Architect scalable backends with NestJS, Node.js, and TypeScript.</li>
+              <li>Design real-time systems using WebSockets, Socket.io, and Redis.</li>
+              <li>Build REST APIs and microservices with Express, Prisma, and MySQL/PostgreSQL.</li>
+              <li>Implement secure auth, RBAC, queues, and caching for high-concurrency apps.</li>
+              <li>Develop Telegram mini-apps/bots with gamification and referral systems.</li>
+              <li>Create cloud-ready deployments on AWS with CI/CD and monitoring.</li>
+              <li>Work with payment gateways and blockchain staking dashboards.</li>
+              <li>Ship reliable systems (99.9%+ uptime) using clean code and testing practices.</li>
             </ul>
           </article>
 
