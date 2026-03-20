@@ -11,8 +11,9 @@ import SocialIcons from "./SocialIcons";
 import WhatIDo from "./WhatIDo";
 import Work from "./Work";
 import setSplitText from "./utils/splitText";
+import dynamic from "next/dynamic";
 
-const TechStack = lazy(() => import("./TechStack"));
+const TechStack = dynamic(() => import("./TechStack"), { ssr: false });
 
 const MainContainer = ({ children }: PropsWithChildren) => {
     const [isDesktopView, setIsDesktopView] = useState<boolean>(
