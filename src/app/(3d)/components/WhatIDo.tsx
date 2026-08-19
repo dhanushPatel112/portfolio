@@ -128,8 +128,9 @@ const WhatIDo = () => {
               <h3>BACKEND</h3>
               <h4>Scalable Server Architecture</h4>
               <p>
-                Designing robust APIs and microservices. From CMS platforms to
-                complex business logic, I build backends that scale.
+                Designing robust APIs and microservices, then shipping them to the
+                cloud. From CMS platforms to complex business logic, I build
+                backends that scale and deploy them with Docker, AWS, and CI/CD.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
@@ -140,6 +141,10 @@ const WhatIDo = () => {
                 <div className="what-tags">PostgreSQL</div>
                 <div className="what-tags">REST APIs</div>
                 <div className="what-tags">Microservices</div>
+                <div className="what-tags">Redis</div>
+                <div className="what-tags">AWS</div>
+                <div className="what-tags">Docker</div>
+                <div className="what-tags">CI/CD</div>
               </div>
               <div className="what-arrow"></div>
             </div>

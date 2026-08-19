@@ -1,8 +1,8 @@
 {
-  "name": "nextjs-16-starter-shadcn",
+  "name": "dhanush-patel-portfolio",
   "version": "1.0.0",
   "private": false,
-  "website": "https://nextjs-16-starter-shadcn.vercel.app/",
+  "website": "https://dhanushpatel112.vercel.app",
   "license": "MIT",
   "scripts": {
     "dev": "next dev --turbopack",

@@ -22,6 +22,7 @@ const Contact = () => {
             <a
               href="https://github.com/dhanushPatel112"
               target="_blank"
+              rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
@@ -30,6 +31,7 @@ const Contact = () => {
             <a
               href="https://www.linkedin.com/in/dhanush-patel-2185291ab"
               target="_blank"
+              rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >
@@ -38,6 +40,7 @@ const Contact = () => {
             <a
               href="https://leetcode.com/u/dev-d-patel"
               target="_blank"
+              rel="noopener noreferrer"
               data-cursor="disable"
               className="contact-social"
             >

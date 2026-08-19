@@ -57,22 +57,22 @@ const SocialIcons = () => {
         <div className='icons-section'>
             <div className='social-icons' data-cursor='icons' id='social'>
                 <span>
-                    <a href='https://github.com/dhanushPatel112' target='_blank'>
+                    <a href='https://github.com/dhanushPatel112' target='_blank' rel='noopener noreferrer' aria-label='GitHub'>
                         <FaGithub />
                     </a>
                 </span>
                 <span>
-                    <a href='https://www.linkedin.com/in/dhanush-patel-2185291ab' target='_blank'>
+                    <a href='https://www.linkedin.com/in/dhanush-patel-2185291ab' target='_blank' rel='noopener noreferrer' aria-label='LinkedIn'>
                         <FaLinkedinIn />
                     </a>
                 </span>
                 <span>
-                    <a href='https://leetcode.com/u/dev-d-patel/' target='_blank'>
+                    <a href='https://leetcode.com/u/dev-d-patel/' target='_blank' rel='noopener noreferrer' aria-label='LeetCode'>
                         <SiLeetcode />
                     </a>
                 </span>
             </div>
-            <a className='resume-button' href='/resume/Dhanush_Patel_Resume.pdf' target='_blank'>
+            <a className='resume-button' href='/resume/Dhanush_Patel_Resume.pdf' target='_blank' rel='noopener noreferrer' aria-label='Resume'>
                 <HoverLinks text='RESUME' />
                 <span>
                     <TbNotes />

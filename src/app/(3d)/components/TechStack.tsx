@@ -134,9 +134,11 @@ const TechStack = () => {
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY || document.documentElement.scrollTop;
-            const threshold = document
-                .getElementById("work")!
-                .getBoundingClientRect().top;
+            const anchor =
+                document.getElementById("techstack") ??
+                document.getElementById("career");
+            if (!anchor) return;
+            const threshold = anchor.getBoundingClientRect().top;
             setIsActive(scrollY > threshold);
         };
         document.querySelectorAll(".header a").forEach((elem) => {
@@ -172,7 +174,7 @@ const TechStack = () => {
     }, []);
 
     return (
-        <div className="techstack">
+        <div className="techstack" id="techstack">
             <h2> My Techstack</h2>
 
             <Canvas

@@ -21,10 +21,10 @@ const Career = () => {
                             <h3>2022</h3>
                         </div>
                         <p>
-                            Led a team of 3 to build a Next.js web app with FCM and AWS S3
-                            integration. Developed a drag-and-drop design editor in React for
-                            template creation, and received the "Best Intern" award for
-                            exceptional performance.
+                            Led a team of 3 to build the admin portal of a Next.js visitor app
+                            with FCM, AWS S3, and PostgreSQL on AWS. Ran Scrum and owned client
+                            communication. Built a drag-and-drop React template editor with
+                            dynamic PDF generation, and earned the "Best Intern" award.
                         </p>
                     </div>
                     <div className="career-info-box">
@@ -36,11 +36,11 @@ const Career = () => {
                             <h3>2024</h3>
                         </div>
                         <p>
-                            Led full-stack development of enterprise applications using
-                            Node.js, React, and TypeScript, including migrating a Java backend
-                            to Node.js. Built scalable backend services with NestJS, Prisma
-                            ORM, PostgreSQL, and Redis, and deployed Telegram mini-apps with
-                            real-time WebSocket features.
+                            Led full-stack development across enterprise apps with Node.js,
+                            NestJS, TypeScript, and React. Ran a no-downtime Java → Node.js
+                            migration for a financial transactions app and moved another product
+                            from MongoDB to PostgreSQL, with response-time wins from caching,
+                            payload trimming, and query tuning.
                         </p>
                     </div>
                     <div className="career-info-box">
@@ -52,10 +52,10 @@ const Career = () => {
                             <h3>NOW</h3>
                         </div>
                         <p>
-                            Designing and managing a full Turbo monorepo backend architecture
-                            with NestJS and PostgreSQL, implementing Redis for caching and
-                            queueing. Ensuring 99.9% uptime across RESTful APIs serving
-                            multiple client applications with role-based access control.
+                            Designing a Turbo monorepo backend with NestJS and PostgreSQL, using
+                            Redis for caching and background queues. Set up CI/CD with GitHub
+                            Actions, NGINX, and AWS EC2 + RDS, with JWT auth and role-based
+                            access control across REST APIs serving multiple client apps.
                         </p>
                     </div>
                 </div>
