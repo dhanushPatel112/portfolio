@@ -1,7 +1,13 @@
 import * as THREE from "three";
 import { DRACOLoader, GLTF, GLTFLoader } from "three-stdlib";
 import { setCharTimeline, setAllTimeline } from "../../utils/GsapScroll";
-import { decryptFile } from "./decrypt";
+
+// Tunable framing for the RobotExpressive model so it sits in the existing
+// camera view (camera looks down -Z at roughly y = 13).
+const ROBOT_SCALE = 3.0;
+const ROBOT_POSITION = { x: 0, y: 10.4, z: 0 };
+// Accent colour applied to the robot's "Main" body material to match the site.
+const ROBOT_ACCENT = "#8B4513";
 
 const setCharacter = (
   renderer: THREE.WebGLRenderer,
@@ -15,63 +21,73 @@ const setCharacter = (
 
   const loadCharacter = () => {
     return new Promise<GLTF | null>((resolve, reject) => {
-      void (async () => {
-      try {
-        const encryptedBlob = await decryptFile(
-          "/models/character.enc?v=2",
-          "MyCharacter12"
-        );
-        const blobUrl = URL.createObjectURL(new Blob([encryptedBlob]));
+      loader.load(
+        "/models/RobotExpressive.glb?v=1",
+        async (gltf) => {
+          const character = gltf.scene;
+          await renderer.compileAsync(character, camera, scene);
 
-        let character: THREE.Object3D;
-        loader.load(
-          blobUrl,
-          async (gltf) => {
-            character = gltf.scene;
-            await renderer.compileAsync(character, camera, scene);
-            character.traverse((child: any) => {
-              if (child.isMesh) {
-                const mesh = child as THREE.Mesh;
+          character.traverse((child) => {
+            if ((child as THREE.Mesh).isMesh) {
+              const mesh = child as THREE.Mesh;
+              // Recolour the robot's main body panels to the site accent.
+              const applyAccent = (mat: THREE.Material) => {
+                if (mat.name === "Main") {
+                  const newMat = (mat as THREE.MeshStandardMaterial).clone();
+                  newMat.color = new THREE.Color(ROBOT_ACCENT);
 
-                // Change clothing colors to match site theme
-                if (mesh.material) {
-                  if (mesh.name === "BODY.SHIRT") { // The shirt mesh
-                    const newMat = (mesh.material as THREE.Material).clone() as THREE.MeshStandardMaterial;
-                    newMat.color = new THREE.Color("#8B4513");
-                    mesh.material = newMat;
-                  } else if (mesh.name === "Pant") {
-                    const newMat = (mesh.material as THREE.Material).clone() as THREE.MeshStandardMaterial;
-                    newMat.color = new THREE.Color("#000000");
-                    mesh.material = newMat;
-                  }
+                  return newMat;
                 }
 
-                child.castShadow = true;
-                child.receiveShadow = true;
-                mesh.frustumCulled = true;
+                return mat;
+              };
+              if (Array.isArray(mesh.material)) {
+                mesh.material = mesh.material.map(applyAccent);
+              } else if (mesh.material) {
+                mesh.material = applyAccent(mesh.material);
               }
-            });
-            resolve(gltf);
-            setCharTimeline(character, camera);
-            setAllTimeline();
-            character!.getObjectByName("footR")!.position.y = 3.36;
-            character!.getObjectByName("footL")!.position.y = 3.36;
+              mesh.castShadow = true;
+              mesh.receiveShadow = true;
+              mesh.frustumCulled = true;
+            }
+          });
 
-            // Monitor scale is handled by GsapScroll.ts animations
+          character.scale.setScalar(ROBOT_SCALE);
+          character.position.set(
+            ROBOT_POSITION.x,
+            ROBOT_POSITION.y,
+            ROBOT_POSITION.z
+          );
 
-            dracoLoader.dispose();
-          },
-          undefined,
-          (error) => {
-            console.error("Error loading GLTF model:", error);
-            reject(error);
-          }
-        );
-      } catch (err) {
-        reject(err);
-        console.error(err);
-      }
-      })();
+          // Soft glow plane behind the robot — stands in for the old monitor
+          // "screenlight". Named "screenlight" so the rest of the scene wiring
+          // (point-light sync, scroll reveal) finds it unchanged.
+          const glowGeo = new THREE.PlaneGeometry(2.6, 2.6);
+          const glowMat = new THREE.MeshStandardMaterial({
+            color: "#FFD9A0",
+            emissive: new THREE.Color("#FFD9A0"),
+            emissiveIntensity: 0,
+            transparent: true,
+            opacity: 0,
+            depthWrite: false,
+          });
+          const glow = new THREE.Mesh(glowGeo, glowMat);
+          glow.name = "screenlight";
+          glow.position.set(0, 1.4, -1.6);
+          character.add(glow);
+
+          resolve(gltf);
+          setCharTimeline(character, camera);
+          setAllTimeline();
+
+          dracoLoader.dispose();
+        },
+        undefined,
+        (error) => {
+          console.error("Error loading GLTF model:", error);
+          reject(error);
+        }
+      );
     });
   };
 

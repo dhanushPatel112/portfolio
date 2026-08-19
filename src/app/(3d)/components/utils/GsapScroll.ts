@@ -37,31 +37,23 @@ export function setCharTimeline(
       invalidateOnRefresh: true,
     },
   });
-  let screenLight: any, monitor: any;
-  character?.children.forEach((object: any) => {
-    if (object.name === "Plane004") {
-      object.children.forEach((child: any) => {
-        child.material.transparent = true;
-        child.material.opacity = 0;
-        if (child.material.name === "Material.018") {
-          monitor = child;
-          child.material.color.set("#FFFFFF");
-        }
-      });
-    }
-    if (object.name === "screenlight") {
-      object.material.transparent = true;
-      object.material.opacity = 0;
-      object.material.emissive.set("#FFD9A0");
-      gsap.timeline({ repeat: -1, repeatRefresh: true }).to(object.material, {
-        emissiveIntensity: () => intensity * 8,
-        duration: () => Math.random() * 0.6,
-        delay: () => Math.random() * 0.1,
-      });
-      screenLight = object;
-    }
-  });
-  const neckBone = character?.getObjectByName("spine005");
+  // Soft glow plane behind the robot (added in character.ts, named
+  // "screenlight"). It flickers gently and fades in during the reveal.
+  let screenLight: any;
+  const glow = character?.getObjectByName("screenlight");
+  if (glow) {
+    const mesh = glow as THREE.Mesh & { material: THREE.MeshStandardMaterial };
+    mesh.material.transparent = true;
+    mesh.material.opacity = 0;
+    mesh.material.emissive.set("#FFD9A0");
+    gsap.timeline({ repeat: -1, repeatRefresh: true }).to(mesh.material, {
+      emissiveIntensity: () => intensity * 8,
+      duration: () => Math.random() * 0.6,
+      delay: () => Math.random() * 0.1,
+    });
+    screenLight = mesh;
+  }
+  const neckBone = character?.getObjectByName("Neck");
   if (window.innerWidth > 1024) {
     if (character) {
       tl1
@@ -75,7 +67,7 @@ export function setCharTimeline(
       tl2
         .to(
           camera.position,
-          { z: 75, y: 8.4, duration: 6, delay: 2, ease: "power3.inOut" },
+          { z: 42, y: 10.5, duration: 6, delay: 2, ease: "power3.inOut" },
           0
         )
         .to(".about-section", { y: "30%", duration: 6 }, 0)
@@ -86,20 +78,19 @@ export function setCharTimeline(
           { pointerEvents: "none", x: "-12%", delay: 2, duration: 5 },
           0
         )
-        .to(character.rotation, { y: 0.92, x: 0.12, delay: 3, duration: 3 }, 0)
-        .to(neckBone!.rotation, { x: 0.6, delay: 2, duration: 3 }, 0)
-        .to(monitor.material, { opacity: 1, duration: 0.8, delay: 3.2 }, 0)
+        // Robot turns to face the "What I Do" reveal and gives a thumbs-up.
+        .to(character.rotation, { y: 0.4, x: 0.05, delay: 3, duration: 3 }, 0)
+        .to(neckBone!.rotation, { x: 0.25, delay: 2, duration: 3 }, 0)
+        .call(
+          () => window.dispatchEvent(new CustomEvent("robot-gesture")),
+          [],
+          4.5
+        )
         .to(screenLight.material, { opacity: 1, duration: 0.8, delay: 4.5 }, 0)
         .fromTo(
           ".what-box-in",
           { display: "none" },
           { display: "flex", duration: 0.1, delay: 6 },
-          0
-        )
-        .fromTo(
-          monitor.position,
-          { y: -10, z: 2 },
-          { y: 0, z: 0, delay: 1.5, duration: 3 },
           0
         )
         .fromTo(

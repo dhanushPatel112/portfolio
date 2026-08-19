@@ -46,6 +46,11 @@ composition, and ported Skills / Certifications / Education / Cloud sections).
 GSAP and its ScrollSmoother/SplitText plugins are © GreenSock, used under the
 standard GSAP license.
 
+The 3D hero model is [**RobotExpressive**](https://threejs.org/examples/?q=robot#webgl_animation_skinning_morph)
+by Tomás Laulhé, released under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/)
+(modified by Don McCurdy for the three.js examples). No attribution is required
+under CC0; this credit is provided as a courtesy.
+
 ## License
 
 MIT — see [`LICENSE.md`](./LICENSE.md).
