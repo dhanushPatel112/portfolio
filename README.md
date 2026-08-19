@@ -36,6 +36,16 @@ Create a `.env.local` in the project root:
 | `NEXT_PUBLIC_CLARITY_ID` | optional | Microsoft Clarity analytics project id |
 | `NEXT_PUBLIC_API_KEY` | optional | Firebase web API key (FCM, etc.) |
 
+## Credits
+
+The 3D scene (character loader, GSAP ScrollSmoother flow, and physics tech-stack)
+is derived from the open-source, MIT-licensed
+[`akashrmalhotra/3d-portfolio`](https://github.com/akashrmalhotra/3d-portfolio)
+template, then re-skinned and restructured (new palette, typography, section
+composition, and ported Skills / Certifications / Education / Cloud sections).
+GSAP and its ScrollSmoother/SplitText plugins are © GreenSock, used under the
+standard GSAP license.
+
 ## License
 
-MIT
+MIT — see [`LICENSE.md`](./LICENSE.md).

@@ -14,7 +14,8 @@ const setCharacter = (
   loader.setDRACOLoader(dracoLoader);
 
   const loadCharacter = () => {
-    return new Promise<GLTF | null>(async (resolve, reject) => {
+    return new Promise<GLTF | null>((resolve, reject) => {
+      void (async () => {
       try {
         const encryptedBlob = await decryptFile(
           "/models/character.enc?v=2",
@@ -70,6 +71,7 @@ const setCharacter = (
         reject(err);
         console.error(err);
       }
+      })();
     });
   };
 

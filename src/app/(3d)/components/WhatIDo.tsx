@@ -16,7 +16,8 @@ const WhatIDo = () => {
         }
       });
     }
-    return () => {
+    
+return () => {
       containerRef.current.forEach((container) => {
         if (container) {
           container.removeEventListener("click", () => handleClick(container));
@@ -24,7 +25,8 @@ const WhatIDo = () => {
       });
     };
   }, []);
-  return (
+  
+return (
     <div className="whatIDO">
       <div className="what-box">
         <h2 className="title">
@@ -145,6 +147,47 @@ const WhatIDo = () => {
                 <div className="what-tags">AWS</div>
                 <div className="what-tags">Docker</div>
                 <div className="what-tags">CI/CD</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
+          <div
+            className="what-content what-noTouch"
+            ref={(el) => setRef(el, 2)}
+          >
+            <div className="what-border1">
+              <svg height="100%">
+                <line
+                  x1="0"
+                  y1="100%"
+                  x2="100%"
+                  y2="100%"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeDasharray="6,6"
+                />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>CLOUD &amp; DEVOPS</h3>
+              <h4>Ship, Deploy &amp; Scale</h4>
+              <p>
+                Taking services from localhost to production — containerized,
+                automated, and observable. I run CI/CD pipelines, wire up cloud
+                infrastructure, and keep deploys boring with zero downtime.
+              </p>
+              <h5>Skillset &amp; tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">AWS EC2</div>
+                <div className="what-tags">AWS RDS</div>
+                <div className="what-tags">AWS S3</div>
+                <div className="what-tags">AWS SES</div>
+                <div className="what-tags">Docker</div>
+                <div className="what-tags">NGINX</div>
+                <div className="what-tags">GitHub Actions</div>
+                <div className="what-tags">CI/CD</div>
+                <div className="what-tags">Redis</div>
               </div>
               <div className="what-arrow"></div>
             </div>

@@ -1,0 +1,115 @@
+.skills-section {
+  margin: auto;
+  padding: 100px 0px;
+  position: relative;
+  z-index: 2;
+}
+
+.skills-container {
+  width: 100%;
+}
+
+.skills-heading {
+  font-size: 60px;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 60px 0;
+  background: linear-gradient(0deg, var(--accentColor2), #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.skills-heading span {
+  font-family: "Geist", sans-serif;
+  font-weight: 300;
+  -webkit-text-fill-color: var(--accentColor);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.skills-card {
+  border: 1px solid rgba(245, 181, 68, 0.18);
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.015)
+  );
+  border-radius: 16px;
+  padding: 28px 26px;
+  box-sizing: border-box;
+  transition: border-color 0.4s, transform 0.4s, box-shadow 0.4s;
+}
+
+.skills-card:hover {
+  border-color: rgba(245, 181, 68, 0.5);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px -20px var(--glowColorSoft);
+}
+
+.skills-card h3 {
+  margin: 0 0 18px 0;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--accentColor);
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skills-tag {
+  font-family: "Geist", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 4px 12px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 30px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.skills-card:hover .skills-tag {
+  border-color: rgba(245, 181, 68, 0.3);
+}
+
+@media only screen and (max-width: 1400px) {
+  .skills-heading {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .skills-section {
+    padding: 60px 0px;
+  }
+  .skills-heading {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  .skills-heading {
+    font-size: 34px;
+  }
+}

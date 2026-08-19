@@ -1,6 +1,10 @@
 The MIT License (MIT)
 
-Copyright (c) 2024 Vercel, Inc.
+Copyright (c) 2026 Dhanush Patel
+
+Portions of the 3D scene are derived from the MIT-licensed
+akashrmalhotra/3d-portfolio template (https://github.com/akashrmalhotra/3d-portfolio),
+Copyright (c) its respective authors, used and modified under the MIT License.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

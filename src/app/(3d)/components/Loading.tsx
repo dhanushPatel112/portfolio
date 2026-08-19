@@ -20,17 +20,23 @@ const Loading = ({ percent }: { percent: number }) => {
   }
 
   useEffect(() => {
-    import("./utils/initialFX").then((module) => {
-      if (isLoaded) {
-        setClicked(true);
-        setTimeout(() => {
-          if (module.initialFX) {
-            module.initialFX();
-          }
-          setIsLoading(false);
-        }, 900);
-      }
-    });
+    import("./utils/initialFX")
+      .then((module) => {
+        if (isLoaded) {
+          setClicked(true);
+          setTimeout(() => {
+            if (module.initialFX) {
+              module.initialFX();
+            }
+            setIsLoading(false);
+          }, 900);
+        }
+
+        return true;
+      })
+      .catch((error) => {
+        console.error("Error loading initialFX:", error);
+      });
   }, [isLoaded]);
 
   function handleMouseMove(e: React.MouseEvent<HTMLElement>) {
@@ -131,5 +137,6 @@ export const setProgress = (setLoading: (value: number) => void) => {
       }, 2);
     });
   }
-  return { loaded, percent, clear };
+  
+return { loaded, percent, clear };
 };

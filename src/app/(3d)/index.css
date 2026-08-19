@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap");
 
 :root {
   font-family: "Geist", sans-serif;
@@ -8,7 +8,7 @@
   line-height: 1.5;
   scroll-behavior: smooth;
   color-scheme: light dark;
-  color: #eae5ec;
+  color: #f2ede6;
   background-color: var(--backgroundColor);
 
   font-synthesis: none;
@@ -18,8 +18,13 @@
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  --accentColor: #5eead4;
-  --backgroundColor: #0a0e17;
+  /* Sunset palette — warm amber/gold on warm charcoal (de-cloned from the purple/teal template) */
+  --accentColor: #f5b544;
+  --accentColor2: #ff8c42;
+  --glowColor: #f59e3c;
+  --glowColorSoft: rgba(245, 158, 60, 0.6);
+  --backgroundColor: #0d0b0a;
+  --displayFont: "Space Grotesk", "Geist", sans-serif;
   --vh: 100vh;
   --vh: 100svh;
 }
@@ -30,7 +35,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Geist", sans-serif;
+  font-family: var(--displayFont);
 }
 
 body {
@@ -66,7 +71,7 @@ main {
 body {
   margin: 0;
   height: auto;
-  background-color: #050810;
+  background-color: #070605;
   flex-grow: 1;
   --cWidth: calc(100% - 30px);
   --cMaxWidth: 1920px;

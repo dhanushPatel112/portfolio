@@ -1,5 +1,6 @@
 import * as THREE from "three";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export function setCharTimeline(
   character: THREE.Object3D<THREE.Object3DEventMap> | null,
@@ -51,7 +52,7 @@ export function setCharTimeline(
     if (object.name === "screenlight") {
       object.material.transparent = true;
       object.material.opacity = 0;
-      object.material.emissive.set("#B0F5EA");
+      object.material.emissive.set("#FFD9A0");
       gsap.timeline({ repeat: -1, repeatRefresh: true }).to(object.material, {
         emissiveIntensity: () => intensity * 8,
         duration: () => Math.random() * 0.6,
@@ -188,4 +189,24 @@ export function setAllTimeline() {
       0
     );
   }
+
+  setRevealTimeline();
+}
+
+// Scroll-reveal for the ported sections (Skills, Certifications, Education).
+// Each element tagged `.gsap-reveal` fades + rises into view as it is scrolled to.
+export function setRevealTimeline() {
+  gsap.set(".gsap-reveal", { opacity: 0, y: 60 });
+  ScrollTrigger.batch(".gsap-reveal", {
+    start: "top 88%",
+    onEnter: (batch) =>
+      gsap.to(batch, {
+        opacity: 1,
+        y: 0,
+        duration: 0.8,
+        ease: "power3.out",
+        stagger: 0.12,
+        overwrite: true,
+      }),
+  });
 }

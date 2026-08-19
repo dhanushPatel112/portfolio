@@ -27,10 +27,10 @@ const imageUrls = [
 ];
 const textures = imageUrls.map((url) => textureLoader?.load?.(url));
 
-const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
+const sphereGeometry = new THREE.SphereGeometry(1, 32, 32);
 
-const spheres = [...Array(30)].map(() => ({
-    scale: [0.7, 1, 0.8, 1, 1][Math.floor(Math.random() * 5)],
+const spheres = [...Array(22)].map(() => ({
+    scale: [0.65, 0.9, 1.15, 1, 0.8][Math.floor(Math.random() * 5)],
 }));
 
 type SphereProps = {
@@ -163,12 +163,15 @@ const TechStack = () => {
             (texture) =>
                 new THREE.MeshPhysicalMaterial({
                     map: texture,
-                    emissive: "#ffffff",
+                    emissive: "#ffcf8a",
                     emissiveMap: texture,
-                    emissiveIntensity: 0.3,
-                    metalness: 0.5,
-                    roughness: 1,
-                    clearcoat: 0.1,
+                    emissiveIntensity: 0.22,
+                    metalness: 0.65,
+                    roughness: 0.75,
+                    clearcoat: 0.6,
+                    clearcoatRoughness: 0.35,
+                    iridescence: 0.4,
+                    iridescenceIOR: 1.3,
                 })
         );
     }, []);
@@ -209,12 +212,12 @@ const TechStack = () => {
                     ))}
                 </Physics>
                 <Environment
-                    files="/models/char_enviorment.hdr"
+                    files="/models/scene_env.hdr"
                     environmentIntensity={0.5}
                     environmentRotation={[0, 4, 2]}
                 />
                 <EffectComposer enableNormalPass={false}>
-                    <N8AO color="#0f002c" aoRadius={2} intensity={1.15} />
+                    <N8AO color="#1a0d05" aoRadius={2} intensity={1.15} />
                 </EffectComposer>
             </Canvas>
         </div>
