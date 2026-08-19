@@ -34,49 +34,43 @@ export const handleTouchEnd = (
   }, 2000);
 };
 
+// `state` holds the smoothed rotation across frames. We intentionally do NOT
+// read the rotation back off the bone: the animation mixer overwrites the Head
+// bone every frame (RobotExpressive's Idle animates the whole body), so reading
+// it back makes the lerp fight the animation and jerk. Keeping our own state and
+// writing the absolute value AFTER mixer.update lets tracking win smoothly.
 export const handleHeadRotation = (
   headBone: THREE.Object3D,
   mouseX: number,
   mouseY: number,
   interpolationX: number,
   interpolationY: number,
-  lerp: (x: number, y: number, t: number) => number
+  lerp: (x: number, y: number, t: number) => number,
+  state: { rx: number; ry: number }
 ) => {
   if (!headBone) return;
+  let targetX: number;
+  let targetY: number;
   if (window.scrollY < 200) {
     const maxRotation = Math.PI / 6;
-    headBone.rotation.y = lerp(
-      headBone.rotation.y,
-      mouseX * maxRotation,
-      interpolationY
-    );
+    targetY = mouseX * maxRotation;
     const minRotationX = -0.3;
     const maxRotationX = 0.4;
     if (mouseY > minRotationX) {
-      if (mouseY < maxRotationX) {
-        headBone.rotation.x = lerp(
-          headBone.rotation.x,
-          -mouseY - 0.5 * maxRotation,
-          interpolationX
-        );
-      } else {
-        headBone.rotation.x = lerp(
-          headBone.rotation.x,
-          -maxRotation - 0.5 * maxRotation,
-          interpolationX
-        );
-      }
+      targetX =
+        mouseY < maxRotationX
+          ? -mouseY - 0.5 * maxRotation
+          : -maxRotation - 0.5 * maxRotation;
     } else {
-      headBone.rotation.x = lerp(
-        headBone.rotation.x,
-        -minRotationX - 0.5 * maxRotation,
-        interpolationX
-      );
+      targetX = -minRotationX - 0.5 * maxRotation;
     }
   } else {
-    if (window.innerWidth > 1024) {
-      headBone.rotation.x = lerp(headBone.rotation.x, -0.4, 0.03);
-      headBone.rotation.y = lerp(headBone.rotation.y, -0.3, 0.03);
-    }
+    if (window.innerWidth <= 1024) return;
+    targetX = -0.4;
+    targetY = -0.3;
   }
+  state.ry = lerp(state.ry, targetY, interpolationY);
+  state.rx = lerp(state.rx, targetX, interpolationX);
+  headBone.rotation.y = state.ry;
+  headBone.rotation.x = state.rx;
 };

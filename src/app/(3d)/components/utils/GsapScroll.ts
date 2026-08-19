@@ -47,7 +47,7 @@ export function setCharTimeline(
     mesh.material.opacity = 0;
     mesh.material.emissive.set("#FFD9A0");
     gsap.timeline({ repeat: -1, repeatRefresh: true }).to(mesh.material, {
-      emissiveIntensity: () => intensity * 8,
+      emissiveIntensity: () => 0.6 + intensity * 1.4,
       duration: () => Math.random() * 0.6,
       delay: () => Math.random() * 0.1,
     });
@@ -67,7 +67,7 @@ export function setCharTimeline(
       tl2
         .to(
           camera.position,
-          { z: 42, y: 10.5, duration: 6, delay: 2, ease: "power3.inOut" },
+          { z: 42, y: 12.5, duration: 6, delay: 2, ease: "power3.inOut" },
           0
         )
         .to(".about-section", { y: "30%", duration: 6 }, 0)

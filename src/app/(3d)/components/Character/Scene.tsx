@@ -115,8 +115,15 @@ const Scene = () => {
                 landingDiv.addEventListener("touchstart", onTouchStart);
                 landingDiv.addEventListener("touchend", onTouchEnd);
             }
+            const headState = { rx: 0, ry: 0 };
             const animate = () => {
                 requestAnimationFrame(animate);
+                const delta = clock.getDelta();
+                // Update the animation mixer FIRST, then apply head tracking so it
+                // overrides the Idle animation's head motion instead of fighting it.
+                if (mixer) {
+                    mixer.update(delta);
+                }
                 if (headBone) {
                     handleHeadRotation(
                         headBone,
@@ -124,13 +131,10 @@ const Scene = () => {
                         mouse.y,
                         interpolation.x,
                         interpolation.y,
-                        THREE.MathUtils.lerp
+                        THREE.MathUtils.lerp,
+                        headState
                     );
                     light.setPointLight(screenLight);
-                }
-                const delta = clock.getDelta();
-                if (mixer) {
-                    mixer.update(delta);
                 }
                 renderer.render(scene, camera);
             };
